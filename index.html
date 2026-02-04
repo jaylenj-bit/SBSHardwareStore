@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <!-- Ambient background layers (warm + cozy) -->
+  <!-- Subtle premium background -->
   <div class="bg-ambient" aria-hidden="true">
     <div class="blob b1"></div>
     <div class="blob b2"></div>
@@ -39,6 +39,7 @@
       <div class="nav__links" id="navLinks">
         <a href="#departments">Departments</a>
         <a href="#featured">Featured</a>
+        <a href="#projects">Bundles</a>
         <a href="#services">Services</a>
         <a href="#why">Why Us</a>
         <a href="#visit">Visit</a>
@@ -47,8 +48,8 @@
     </nav>
   </header>
 
-  <!-- Hero -->
   <main>
+    <!-- HERO (Wix #3 vibe: light, clean, confident) -->
     <section class="hero" aria-label="Hero">
       <div class="hero__content container">
         <div class="hero__copy">
@@ -63,7 +64,7 @@
           </h1>
 
           <p class="hero__subtitle reveal" data-reveal>
-            Tools, lumber, paint, fasteners, and expert advice—organized beautifully so you find what you need in minutes.
+            Tools, lumber, paint, fasteners, and expert advice—organized beautifully so you find what you need fast.
           </p>
 
           <div class="hero__cta reveal" data-reveal>
@@ -90,7 +91,7 @@
           </div>
         </div>
 
-        <!-- Visual "3D" product stack -->
+        <!-- Clean “visual card stack” (kept, but refined) -->
         <div class="hero__visual reveal" data-reveal>
           <div class="stack" id="heroStack" aria-hidden="true">
             <div class="stack__card c1">
@@ -157,7 +158,7 @@
       <div class="section__head">
         <h2 class="section__title reveal" data-reveal>Everything you need—beautifully organized</h2>
         <p class="section__subtitle reveal" data-reveal>
-          Clean browsing, quick scanning, and “feels good” visuals. Tap any department to explore.
+          Clean browsing, quick scanning, and a calm premium feel. Tap any department to explore.
         </p>
       </div>
 
@@ -230,7 +231,7 @@
         <div class="section__head">
           <h2 class="section__title reveal" data-reveal>Featured picks you’ll actually use</h2>
           <p class="section__subtitle reveal" data-reveal>
-            This is the “we’ve got what you need” section—curated, confident, and clean.
+            Curated essentials—clean, confident, and ready for the job.
           </p>
         </div>
 
@@ -280,40 +281,7 @@
           </article>
         </div>
 
-
-  <section class="section container" id="projects">
-  <div class="section__head">
-    <h2 class="section__title reveal" data-reveal>Project-ready bundles (get it done in one trip)</h2>
-    <p class="section__subtitle reveal" data-reveal>
-      Just like a remodeling portfolio—these are real-world builds with the exact essentials.
-    </p>
-  </div>
-
-  <div class="grid grid--projects">
-    <article class="project card tilt reveal" data-reveal>
-      <div class="project__img" aria-hidden="true"></div>
-      <h3>Deck Build Essentials</h3>
-      <p>Fasteners, treated lumber, sealant—plus the bits you’ll forget.</p>
-      <button class="btn btn--small btn--primary" type="button">View Bundle</button>
-    </article>
-
-    <article class="project card tilt reveal" data-reveal>
-      <div class="project__img alt1" aria-hidden="true"></div>
-      <h3>Kitchen Refresh Kit</h3>
-      <p>Caulk, paint tools, anchors, hardware—clean finish, clean install.</p>
-      <button class="btn btn--small btn--primary" type="button">View Bundle</button>
-    </article>
-
-    <article class="project card tilt reveal" data-reveal>
-      <div class="project__img alt2" aria-hidden="true"></div>
-      <h3>Garage Organization</h3>
-      <p>Wall rails, hooks, anchors, bins—everything measured and sturdy.</p>
-      <button class="btn btn--small btn--primary" type="button">View Bundle</button>
-    </article>
-  </div>
-</section>
-
-        <!-- Micro interaction: floating cart toast -->
+        <!-- Toast -->
         <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
           <span class="toast__icon" aria-hidden="true">🧺</span>
           <span class="toast__text" id="toastText">Added to cart</span>
@@ -322,124 +290,157 @@
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="section container" id="services">
+    <!-- Projects / Bundles (Wix #3 signature section) -->
+    <section class="section container" id="projects">
       <div class="section__head">
-        <h2 class="section__title reveal" data-reveal>Services that make projects easier</h2>
+        <h2 class="section__title reveal" data-reveal>Project-ready bundles (get it done in one trip)</h2>
         <p class="section__subtitle reveal" data-reveal>
-          A hardware store should feel supportive. This is where the “at home” feeling meets high-end help.
+          This is the “portfolio” vibe from template #3—real-world project kits that make you feel ready.
         </p>
       </div>
 
-      <div class="grid grid--services">
-        <div class="service card reveal" data-reveal>
-          <div class="service__icon">📏</div>
-          <h3>Precision Cuts</h3>
-          <p>Bring measurements. We’ll cut lumber and sheets clean & accurate.</p>
-          <ul class="checklist">
-            <li>Fast turnaround</li>
-            <li>Cleaner edges</li>
-            <li>Project-friendly advice</li>
-          </ul>
+      <div class="grid grid--projects">
+        <article class="project card tilt reveal" data-reveal>
+          <div class="project__img" aria-hidden="true"></div>
+          <h3>Deck Build Essentials</h3>
+          <p>Fasteners, treated lumber, sealant—plus the bits you’ll forget.</p>
+          <button class="btn btn--small btn--primary" type="button">View Bundle</button>
+        </article>
+
+        <article class="project card tilt reveal" data-reveal>
+          <div class="project__img alt1" aria-hidden="true"></div>
+          <h3>Kitchen Refresh Kit</h3>
+          <p>Caulk, paint tools, anchors, hardware—clean finish, clean install.</p>
+          <button class="btn btn--small btn--primary" type="button">View Bundle</button>
+        </article>
+
+        <article class="project card tilt reveal" data-reveal>
+          <div class="project__img alt2" aria-hidden="true"></div>
+          <h3>Garage Organization</h3>
+          <p>Rails, hooks, anchors, bins—everything measured and sturdy.</p>
+          <button class="btn btn--small btn--primary" type="button">View Bundle</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title reveal" data-reveal>Services that make projects easier</h2>
+          <p class="section__subtitle reveal" data-reveal>
+            Comfort-first help, high-end results.
+          </p>
         </div>
 
-        <div class="service card reveal" data-reveal>
-          <div class="service__icon">🎯</div>
-          <h3>Color Match Studio</h3>
-          <p>Match a sample, pick a finish, and walk out confident.</p>
-          <ul class="checklist">
-            <li>Warm palettes</li>
-            <li>Pro-grade primers</li>
-            <li>Brush + roller pairing</li>
-          </ul>
-        </div>
+        <div class="grid grid--services">
+          <div class="service card reveal" data-reveal>
+            <div class="service__icon">📏</div>
+            <h3>Precision Cuts</h3>
+            <p>Bring measurements. We’ll cut lumber and sheets clean & accurate.</p>
+            <ul class="checklist">
+              <li>Fast turnaround</li>
+              <li>Cleaner edges</li>
+              <li>Project-friendly advice</li>
+            </ul>
+          </div>
 
-        <div class="service card reveal" data-reveal>
-          <div class="service__icon">🧠</div>
-          <h3>Expert Aisle Help</h3>
-          <p>Not sure which fitting/anchor/bit you need? We’ll get you right.</p>
-          <ul class="checklist">
-            <li>No guessing</li>
-            <li>Right parts first</li>
-            <li>Weekend-project friendly</li>
-          </ul>
+          <div class="service card reveal" data-reveal>
+            <div class="service__icon">🎯</div>
+            <h3>Color Match Studio</h3>
+            <p>Match a sample, pick a finish, and walk out confident.</p>
+            <ul class="checklist">
+              <li>Warm palettes</li>
+              <li>Pro-grade primers</li>
+              <li>Brush + roller pairing</li>
+            </ul>
+          </div>
+
+          <div class="service card reveal" data-reveal>
+            <div class="service__icon">🧠</div>
+            <h3>Expert Aisle Help</h3>
+            <p>Not sure which fitting/anchor/bit you need? We’ll get you right.</p>
+            <ul class="checklist">
+              <li>No guessing</li>
+              <li>Right parts first</li>
+              <li>Weekend-project friendly</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Why Us (high-end credibility) -->
-    <section class="section section--alt" id="why">
-      <div class="container">
-        <div class="split">
-          <div class="split__left">
-            <h2 class="section__title reveal" data-reveal>High-end feel. Hometown warmth.</h2>
-            <p class="section__subtitle reveal" data-reveal>
-              We built this store around how people actually shop: quickly, confidently, and without stress.
+    <!-- Why Us -->
+    <section class="section container" id="why">
+      <div class="split">
+        <div class="split__left">
+          <h2 class="section__title reveal" data-reveal>High-end feel. Hometown warmth.</h2>
+          <p class="section__subtitle reveal" data-reveal>
+            Built around how people actually shop: quickly, confidently, without stress.
+          </p>
+
+          <div class="featurelist">
+            <div class="feature reveal" data-reveal>
+              <div class="feature__icon">✨</div>
+              <div>
+                <h3>Beautifully labeled aisles</h3>
+                <p>Find what you need faster—less wandering, more doing.</p>
+              </div>
+            </div>
+
+            <div class="feature reveal" data-reveal>
+              <div class="feature__icon">🪵</div>
+              <div>
+                <h3>Quality you can feel</h3>
+                <p>Solid tools, straight boards, reliable supplies—no “maybe it’ll work.”</p>
+              </div>
+            </div>
+
+            <div class="feature reveal" data-reveal>
+              <div class="feature__icon">☕</div>
+              <div>
+                <h3>Comfort-first shopping</h3>
+                <p>Warm layout, calm flow, and help when you want it.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split__right reveal" data-reveal>
+          <div class="quote card">
+            <p class="quote__text">
+              “Walked in for two screws. Walked out with the exact bracket, anchors, and a clear plan.
+              Felt like someone actually cared.”
             </p>
-
-            <div class="featurelist">
-              <div class="feature reveal" data-reveal>
-                <div class="feature__icon">✨</div>
-                <div>
-                  <h3>Beautifully labeled aisles</h3>
-                  <p>Find what you need faster—less wandering, more doing.</p>
-                </div>
-              </div>
-
-              <div class="feature reveal" data-reveal>
-                <div class="feature__icon">🪵</div>
-                <div>
-                  <h3>Quality you can feel</h3>
-                  <p>Solid tools, straight boards, reliable supplies—no “maybe it’ll work.”</p>
-                </div>
-              </div>
-
-              <div class="feature reveal" data-reveal>
-                <div class="feature__icon">☕</div>
-                <div>
-                  <h3>Comfort-first shopping</h3>
-                  <p>Warm lighting, calm layout, and help when you want it.</p>
-                </div>
+            <div class="quote__meta">
+              <span class="quote__avatar" aria-hidden="true">🧑‍🔧</span>
+              <div>
+                <strong>Local Customer</strong>
+                <span>Weekend DIY</span>
               </div>
             </div>
           </div>
 
-          <div class="split__right reveal" data-reveal>
-            <div class="quote card">
-              <p class="quote__text">
-                “Walked in for two screws. Walked out with the exact bracket, anchors, and a clear plan.
-                Felt like someone actually cared.”
-              </p>
-              <div class="quote__meta">
-                <span class="quote__avatar" aria-hidden="true">🧑‍🔧</span>
-                <div>
-                  <strong>Local Customer</strong>
-                  <span>Weekend DIY</span>
-                </div>
-              </div>
+          <div class="mini-grid">
+            <div class="mini card tilt">
+              <span class="mini__icon">🚚</span>
+              <h4>Same-day pickup</h4>
+              <p>Order essentials, grab fast.</p>
             </div>
-
-            <div class="mini-grid">
-              <div class="mini card tilt">
-                <span class="mini__icon">🚚</span>
-                <h4>Same-day pickup</h4>
-                <p>Order essentials, grab fast.</p>
-              </div>
-              <div class="mini card tilt">
-                <span class="mini__icon">🧾</span>
-                <h4>Clear pricing</h4>
-                <p>No surprises at checkout.</p>
-              </div>
-              <div class="mini card tilt">
-                <span class="mini__icon">🧤</span>
-                <h4>Safety-first</h4>
-                <p>PPE & guidance for every job.</p>
-              </div>
-              <div class="mini card tilt">
-                <span class="mini__icon">🧰</span>
-                <h4>Pro inventory</h4>
-                <p>From basics to heavy-duty.</p>
-              </div>
+            <div class="mini card tilt">
+              <span class="mini__icon">🧾</span>
+              <h4>Clear pricing</h4>
+              <p>No surprises at checkout.</p>
+            </div>
+            <div class="mini card tilt">
+              <span class="mini__icon">🧤</span>
+              <h4>Safety-first</h4>
+              <p>PPE & guidance for every job.</p>
+            </div>
+            <div class="mini card tilt">
+              <span class="mini__icon">🧰</span>
+              <h4>Pro inventory</h4>
+              <p>From basics to heavy-duty.</p>
             </div>
           </div>
         </div>
@@ -447,50 +448,52 @@
     </section>
 
     <!-- Visit -->
-    <section class="section container" id="visit">
-      <div class="section__head">
-        <h2 class="section__title reveal" data-reveal>Come in today—leave ready</h2>
-        <p class="section__subtitle reveal" data-reveal>
-          We’ll help you pick the right parts, the right tools, and the right plan.
-        </p>
-      </div>
-
-      <div class="visit">
-        <div class="visit__card card reveal" data-reveal>
-          <h3>Store Info</h3>
-          <div class="visit__row">
-            <span class="visit__label">Address</span>
-            <span class="visit__value">123 Cedar St, Your City, NY</span>
-          </div>
-          <div class="visit__row">
-            <span class="visit__label">Hours</span>
-            <span class="visit__value">Mon–Sat 7AM–8PM • Sun 9AM–6PM</span>
-          </div>
-          <div class="visit__row">
-            <span class="visit__label">Phone</span>
-            <span class="visit__value">(555) 012-3456</span>
-          </div>
-
-          <div class="visit__actions">
-            <a class="btn btn--primary" href="#top">Back to top</a>
-            <button class="btn btn--ghost" id="copyBtn" type="button">Copy Address</button>
-          </div>
-
-          <div class="divider"></div>
-
-          <h4 class="visit__tiny">Quick note</h4>
-          <p class="muted">
-            This is a demo template. Replace the address and hours with your real business info.
+    <section class="section section--alt" id="visit">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title reveal" data-reveal>Come in today—leave ready</h2>
+          <p class="section__subtitle reveal" data-reveal>
+            We’ll help you pick the right parts, tools, and plan.
           </p>
         </div>
 
-        <div class="visit__map card reveal" data-reveal aria-label="Map placeholder">
-          <div class="map">
-            <div class="map__pin" aria-hidden="true">📍</div>
-            <div class="map__grid" aria-hidden="true"></div>
-            <div class="map__label">
-              <strong>Easy parking</strong>
-              <span>Right out front</span>
+        <div class="visit">
+          <div class="visit__card card reveal" data-reveal>
+            <h3>Store Info</h3>
+            <div class="visit__row">
+              <span class="visit__label">Address</span>
+              <span class="visit__value">123 Cedar St, Your City, NY</span>
+            </div>
+            <div class="visit__row">
+              <span class="visit__label">Hours</span>
+              <span class="visit__value">Mon–Sat 7AM–8PM • Sun 9AM–6PM</span>
+            </div>
+            <div class="visit__row">
+              <span class="visit__label">Phone</span>
+              <span class="visit__value">(555) 012-3456</span>
+            </div>
+
+            <div class="visit__actions">
+              <a class="btn btn--primary" href="#top">Back to top</a>
+              <button class="btn btn--ghost" id="copyBtn" type="button">Copy Address</button>
+            </div>
+
+            <div class="divider"></div>
+
+            <h4 class="visit__tiny">Quick note</h4>
+            <p class="muted">
+              This is a demo template. Replace the address and hours with your real business info.
+            </p>
+          </div>
+
+          <div class="visit__map card reveal" data-reveal aria-label="Map placeholder">
+            <div class="map">
+              <div class="map__pin" aria-hidden="true">📍</div>
+              <div class="map__grid" aria-hidden="true"></div>
+              <div class="map__label">
+                <strong>Easy parking</strong>
+                <span>Right out front</span>
+              </div>
             </div>
           </div>
         </div>
@@ -518,7 +521,7 @@
         <h4>Explore</h4>
         <a href="#departments">Departments</a>
         <a href="#featured">Featured</a>
-        <a href="#services">Services</a>
+        <a href="#projects">Bundles</a>
       </div>
 
       <div class="footer__col">
