@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hearth & Hammer Hardware | We’ve Got What You Need</title>
+  <meta name="description" content="A high-end hardware store experience—tools, lumber, paint, hardware, and expert help. Warm, comfortable, professional." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Ambient background layers (warm + cozy) -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- Top progress bar -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__bar" id="progressBar"></div>
+  </div>
+
+  <!-- Sticky Nav -->
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top">
+        <span class="brand__mark" aria-hidden="true">⚒️</span>
+        <span class="brand__text">
+          <span class="brand__name">Hearth & Hammer</span>
+          <span class="brand__tag">Hardware</span>
+        </span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__links" id="navLinks">
+        <a href="#departments">Departments</a>
+        <a href="#featured">Featured</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#visit">Visit</a>
+        <a class="btn btn--small btn--primary" href="#visit">Get Directions</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero" aria-label="Hero">
+      <div class="hero__content container">
+        <div class="hero__copy">
+          <p class="pill reveal" data-reveal>
+            <span class="dot" aria-hidden="true"></span>
+            Neighborhood warmth. Pro-grade inventory.
+          </p>
+
+          <h1 class="hero__title reveal" data-reveal>
+            The hardware store that feels like home—
+            <span class="accent">and stocks like a pro.</span>
+          </h1>
+
+          <p class="hero__subtitle reveal" data-reveal>
+            Tools, lumber, paint, fasteners, and expert advice—organized beautifully so you find what you need in minutes.
+          </p>
+
+          <div class="hero__cta reveal" data-reveal>
+            <a class="btn btn--primary" href="#featured">
+              Shop Highlights
+              <span class="btn__icon" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn--ghost" href="#services">Talk to an Expert</a>
+          </div>
+
+          <div class="hero__stats reveal" data-reveal>
+            <div class="stat">
+              <span class="stat__num" data-count="24000">0</span>
+              <span class="stat__label">Items in stock</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="28">0</span>
+              <span class="stat__label">Departments</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="4">0</span>
+              <span class="stat__label">Min avg checkout</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual "3D" product stack -->
+        <div class="hero__visual reveal" data-reveal>
+          <div class="stack" id="heroStack" aria-hidden="true">
+            <div class="stack__card c1">
+              <div class="stack__icon">🪚</div>
+              <div class="stack__meta">
+                <div class="stack__title">Lumber & Cut</div>
+                <div class="stack__desc">Precision cuts, clean edges</div>
+              </div>
+              <div class="stack__shine"></div>
+            </div>
+
+            <div class="stack__card c2">
+              <div class="stack__icon">🧰</div>
+              <div class="stack__meta">
+                <div class="stack__title">Tool Wall</div>
+                <div class="stack__desc">Pro picks + budget wins</div>
+              </div>
+              <div class="stack__shine"></div>
+            </div>
+
+            <div class="stack__card c3">
+              <div class="stack__icon">🎨</div>
+              <div class="stack__meta">
+                <div class="stack__title">Paint Studio</div>
+                <div class="stack__desc">Color match in minutes</div>
+              </div>
+              <div class="stack__shine"></div>
+            </div>
+
+            <div class="hero__orbit">
+              <span class="orb o1"></span>
+              <span class="orb o2"></span>
+              <span class="orb o3"></span>
+            </div>
+          </div>
+
+          <div class="hero__badge" aria-label="Open today">
+            <span class="badge__top">Open Today</span>
+            <span class="badge__mid">7AM – 8PM</span>
+            <span class="badge__bot">Same-day pickup</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__bottom container">
+        <div class="searchbar reveal" data-reveal>
+          <div class="searchbar__icon" aria-hidden="true">⌕</div>
+          <input id="searchInput" type="text" placeholder="Try: deck screws, paint primer, circular saw…" aria-label="Search products (demo)" />
+          <button class="btn btn--small btn--primary" id="searchBtn" type="button">Search</button>
+        </div>
+
+        <div class="chips reveal" data-reveal aria-label="Quick categories">
+          <button class="chip" data-chip="Fasteners">Fasteners</button>
+          <button class="chip" data-chip="Power Tools">Power Tools</button>
+          <button class="chip" data-chip="Paint">Paint</button>
+          <button class="chip" data-chip="Plumbing">Plumbing</button>
+          <button class="chip" data-chip="Garden">Garden</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments -->
+    <section class="section container" id="departments">
+      <div class="section__head">
+        <h2 class="section__title reveal" data-reveal>Everything you need—beautifully organized</h2>
+        <p class="section__subtitle reveal" data-reveal>
+          Clean browsing, quick scanning, and “feels good” visuals. Tap any department to explore.
+        </p>
+      </div>
+
+      <div class="grid grid--departments">
+        <article class="dept card tilt reveal" data-reveal tabindex="0">
+          <div class="dept__top">
+            <span class="dept__icon">🔩</span>
+            <span class="dept__pill">Most Popular</span>
+          </div>
+          <h3>Fasteners & Hardware</h3>
+          <p>Every size, every finish. Screws, anchors, bolts—labeled right, stocked deep.</p>
+          <a class="link" href="#featured">Browse picks →</a>
+        </article>
+
+        <article class="dept card tilt reveal" data-reveal tabindex="0">
+          <div class="dept__top">
+            <span class="dept__icon">🪚</span>
+            <span class="dept__pill">Cut Service</span>
+          </div>
+          <h3>Lumber & Building</h3>
+          <p>Framing, plywood, trim. Straight boards and quick help in the aisle.</p>
+          <a class="link" href="#services">See services →</a>
+        </article>
+
+        <article class="dept card tilt reveal" data-reveal tabindex="0">
+          <div class="dept__top">
+            <span class="dept__icon">🧯</span>
+            <span class="dept__pill">Safety</span>
+          </div>
+          <h3>Home & Safety</h3>
+          <p>Smoke alarms, fire safety, PPE, locks—peace of mind done right.</p>
+          <a class="link" href="#why">Why shop here →</a>
+        </article>
+
+        <article class="dept card tilt reveal" data-reveal tabindex="0">
+          <div class="dept__top">
+            <span class="dept__icon">🎨</span>
+            <span class="dept__pill">Color Match</span>
+          </div>
+          <h3>Paint & Finishes</h3>
+          <p>Warm tones, clean lines. Primers, stains, brushes and pro tips.</p>
+          <a class="link" href="#featured">Top paint picks →</a>
+        </article>
+
+        <article class="dept card tilt reveal" data-reveal tabindex="0">
+          <div class="dept__top">
+            <span class="dept__icon">🚿</span>
+            <span class="dept__pill">Fix-It</span>
+          </div>
+          <h3>Plumbing</h3>
+          <p>Valves, fittings, sealants. The parts that actually fit—fast.</p>
+          <a class="link" href="#services">Ask an expert →</a>
+        </article>
+
+        <article class="dept card tilt reveal" data-reveal tabindex="0">
+          <div class="dept__top">
+            <span class="dept__icon">🌿</span>
+            <span class="dept__pill">Seasonal</span>
+          </div>
+          <h3>Garden & Outdoor</h3>
+          <p>Hoses, soil, tools, grills. Weekend projects made easy.</p>
+          <a class="link" href="#visit">Visit today →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="section section--alt" id="featured">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title reveal" data-reveal>Featured picks you’ll actually use</h2>
+          <p class="section__subtitle reveal" data-reveal>
+            This is the “we’ve got what you need” section—curated, confident, and clean.
+          </p>
+        </div>
+
+        <div class="grid grid--featured">
+          <article class="product card tilt reveal" data-reveal>
+            <div class="product__badge">New</div>
+            <div class="product__icon">🛠️</div>
+            <h3>All-Purpose Tool Kit</h3>
+            <p>Reliable basics for every home. Organized case, no fluff.</p>
+            <div class="product__row">
+              <span class="product__price">$49.99</span>
+              <button class="btn btn--small btn--primary addBtn" type="button">Add</button>
+            </div>
+          </article>
+
+          <article class="product card tilt reveal" data-reveal>
+            <div class="product__badge">Hot</div>
+            <div class="product__icon">🪛</div>
+            <h3>Driver Bit Set</h3>
+            <p>Magnetic, durable, and labeled. The set you’ll keep forever.</p>
+            <div class="product__row">
+              <span class="product__price">$19.99</span>
+              <button class="btn btn--small btn--primary addBtn" type="button">Add</button>
+            </div>
+          </article>
+
+          <article class="product card tilt reveal" data-reveal>
+            <div class="product__badge">Pro</div>
+            <div class="product__icon">🧱</div>
+            <h3>Heavy-Duty Anchors</h3>
+            <p>Hang shelves with confidence. Clean install, strong hold.</p>
+            <div class="product__row">
+              <span class="product__price">$12.50</span>
+              <button class="btn btn--small btn--primary addBtn" type="button">Add</button>
+            </div>
+          </article>
+
+          <article class="product card tilt reveal" data-reveal>
+            <div class="product__badge">Eco</div>
+            <div class="product__icon">🎨</div>
+            <h3>Low-VOC Interior Paint</h3>
+            <p>Warm finish, easy cleanup. Cozy home vibes, pro results.</p>
+            <div class="product__row">
+              <span class="product__price">$34.00</span>
+              <button class="btn btn--small btn--primary addBtn" type="button">Add</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Micro interaction: floating cart toast -->
+        <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+          <span class="toast__icon" aria-hidden="true">🧺</span>
+          <span class="toast__text" id="toastText">Added to cart</span>
+          <button class="toast__close" id="toastClose" aria-label="Close notification">✕</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section container" id="services">
+      <div class="section__head">
+        <h2 class="section__title reveal" data-reveal>Services that make projects easier</h2>
+        <p class="section__subtitle reveal" data-reveal>
+          A hardware store should feel supportive. This is where the “at home” feeling meets high-end help.
+        </p>
+      </div>
+
+      <div class="grid grid--services">
+        <div class="service card reveal" data-reveal>
+          <div class="service__icon">📏</div>
+          <h3>Precision Cuts</h3>
+          <p>Bring measurements. We’ll cut lumber and sheets clean & accurate.</p>
+          <ul class="checklist">
+            <li>Fast turnaround</li>
+            <li>Cleaner edges</li>
+            <li>Project-friendly advice</li>
+          </ul>
+        </div>
+
+        <div class="service card reveal" data-reveal>
+          <div class="service__icon">🎯</div>
+          <h3>Color Match Studio</h3>
+          <p>Match a sample, pick a finish, and walk out confident.</p>
+          <ul class="checklist">
+            <li>Warm palettes</li>
+            <li>Pro-grade primers</li>
+            <li>Brush + roller pairing</li>
+          </ul>
+        </div>
+
+        <div class="service card reveal" data-reveal>
+          <div class="service__icon">🧠</div>
+          <h3>Expert Aisle Help</h3>
+          <p>Not sure which fitting/anchor/bit you need? We’ll get you right.</p>
+          <ul class="checklist">
+            <li>No guessing</li>
+            <li>Right parts first</li>
+            <li>Weekend-project friendly</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us (high-end credibility) -->
+    <section class="section section--alt" id="why">
+      <div class="container">
+        <div class="split">
+          <div class="split__left">
+            <h2 class="section__title reveal" data-reveal>High-end feel. Hometown warmth.</h2>
+            <p class="section__subtitle reveal" data-reveal>
+              We built this store around how people actually shop: quickly, confidently, and without stress.
+            </p>
+
+            <div class="featurelist">
+              <div class="feature reveal" data-reveal>
+                <div class="feature__icon">✨</div>
+                <div>
+                  <h3>Beautifully labeled aisles</h3>
+                  <p>Find what you need faster—less wandering, more doing.</p>
+                </div>
+              </div>
+
+              <div class="feature reveal" data-reveal>
+                <div class="feature__icon">🪵</div>
+                <div>
+                  <h3>Quality you can feel</h3>
+                  <p>Solid tools, straight boards, reliable supplies—no “maybe it’ll work.”</p>
+                </div>
+              </div>
+
+              <div class="feature reveal" data-reveal>
+                <div class="feature__icon">☕</div>
+                <div>
+                  <h3>Comfort-first shopping</h3>
+                  <p>Warm lighting, calm layout, and help when you want it.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="split__right reveal" data-reveal>
+            <div class="quote card">
+              <p class="quote__text">
+                “Walked in for two screws. Walked out with the exact bracket, anchors, and a clear plan.
+                Felt like someone actually cared.”
+              </p>
+              <div class="quote__meta">
+                <span class="quote__avatar" aria-hidden="true">🧑‍🔧</span>
+                <div>
+                  <strong>Local Customer</strong>
+                  <span>Weekend DIY</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mini-grid">
+              <div class="mini card tilt">
+                <span class="mini__icon">🚚</span>
+                <h4>Same-day pickup</h4>
+                <p>Order essentials, grab fast.</p>
+              </div>
+              <div class="mini card tilt">
+                <span class="mini__icon">🧾</span>
+                <h4>Clear pricing</h4>
+                <p>No surprises at checkout.</p>
+              </div>
+              <div class="mini card tilt">
+                <span class="mini__icon">🧤</span>
+                <h4>Safety-first</h4>
+                <p>PPE & guidance for every job.</p>
+              </div>
+              <div class="mini card tilt">
+                <span class="mini__icon">🧰</span>
+                <h4>Pro inventory</h4>
+                <p>From basics to heavy-duty.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="section container" id="visit">
+      <div class="section__head">
+        <h2 class="section__title reveal" data-reveal>Come in today—leave ready</h2>
+        <p class="section__subtitle reveal" data-reveal>
+          We’ll help you pick the right parts, the right tools, and the right plan.
+        </p>
+      </div>
+
+      <div class="visit">
+        <div class="visit__card card reveal" data-reveal>
+          <h3>Store Info</h3>
+          <div class="visit__row">
+            <span class="visit__label">Address</span>
+            <span class="visit__value">123 Cedar St, Your City, NY</span>
+          </div>
+          <div class="visit__row">
+            <span class="visit__label">Hours</span>
+            <span class="visit__value">Mon–Sat 7AM–8PM • Sun 9AM–6PM</span>
+          </div>
+          <div class="visit__row">
+            <span class="visit__label">Phone</span>
+            <span class="visit__value">(555) 012-3456</span>
+          </div>
+
+          <div class="visit__actions">
+            <a class="btn btn--primary" href="#top">Back to top</a>
+            <button class="btn btn--ghost" id="copyBtn" type="button">Copy Address</button>
+          </div>
+
+          <div class="divider"></div>
+
+          <h4 class="visit__tiny">Quick note</h4>
+          <p class="muted">
+            This is a demo template. Replace the address and hours with your real business info.
+          </p>
+        </div>
+
+        <div class="visit__map card reveal" data-reveal aria-label="Map placeholder">
+          <div class="map">
+            <div class="map__pin" aria-hidden="true">📍</div>
+            <div class="map__grid" aria-hidden="true"></div>
+            <div class="map__label">
+              <strong>Easy parking</strong>
+              <span>Right out front</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand__mark" aria-hidden="true">⚒️</span>
+          <span class="brand__text">
+            <span class="brand__name">Hearth & Hammer</span>
+            <span class="brand__tag">Hardware</span>
+          </span>
+        </div>
+        <p class="footer__text">
+          Warm, organized, pro-grade. The hardware store that makes projects feel possible.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <a href="#departments">Departments</a>
+        <a href="#featured">Featured</a>
+        <a href="#services">Services</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Visit</h4>
+        <a href="#visit">Store info</a>
+        <a href="#why">Why us</a>
+        <a href="#top">Top</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Newsletter</h4>
+        <p class="muted">Get weekend project deals and tips.</p>
+        <form class="newsletter" onsubmit="return false;">
+          <input type="email" placeholder="Email address" aria-label="Email address" />
+          <button class="btn btn--small btn--primary" type="button">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Hearth & Hammer Hardware</span>
+      <span class="muted">Built with comfort-first UX.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
