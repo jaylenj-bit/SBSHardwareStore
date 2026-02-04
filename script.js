@@ -83,21 +83,6 @@ function attachTilt(el) {
 }
 $$(".tilt").forEach(attachTilt);
 
-/* ===== Hero stack parallax ===== */
-const heroStack = $("#heroStack");
-if (heroStack) {
-  heroStack.addEventListener("mousemove", (e) => {
-    const r = heroStack.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    heroStack.style.transform = `rotateX(${(-y * 8)}deg) rotateY(${(x * 10)}deg)`;
-  });
-
-  heroStack.addEventListener("mouseleave", () => {
-    heroStack.style.transform = "";
-  });
-}
-
 /* ===== Counters ===== */
 const counters = $$(".stat__num[data-count]");
 const counterIO = new IntersectionObserver((entries) => {
