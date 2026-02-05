@@ -123,7 +123,7 @@ function showToast(message) {
 toastClose.addEventListener("click", () => toast.classList.remove("show"));
 
 $$(".addBtn").forEach((btn) => {
-  btn.addEventListener("click", () => showToast("Added to cart (demo)"));
+  btn.addEventListener("click", () => showToast("It's Available"));
 });
 
 /* ===== Search demo + chips ===== */
