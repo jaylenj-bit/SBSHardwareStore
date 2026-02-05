@@ -166,3 +166,75 @@ if (prefersReduced) {
   $$(".tilt").forEach(el => (el.style.transition = "none"));
   if (heroStack) heroStack.style.transition = "none";
 }
+
+
+/* ===== Bundle modal (Projects section) ===== */
+const modal = document.getElementById("bundleModal");
+const modalBackdrop = document.getElementById("modalBackdrop");
+const modalClose = document.getElementById("modalClose");
+const modalSecondary = document.getElementById("modalSecondary");
+const modalPrimary = document.getElementById("modalPrimary");
+
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDesc");
+const modalList = document.getElementById("modalList");
+
+const bundles = {
+  deck: {
+    title: "Deck Build Essentials",
+    desc: "Everything you need for a strong, clean outdoor build—picked for durability and weather resistance.",
+    items: ["Exterior deck screws", "Joist hangers & brackets", "Deck sealant / stain", "Pilot bits & driver bits", "Level + tape essentials"]
+  },
+  kitchen: {
+    title: "Kitchen Refresh Kit",
+    desc: "Clean finishes and solid installs—ideal for quick upgrades with professional results.",
+    items: ["Paint + primer pairing", "Caulk + smoothing tools", "Anchors for rails/shelves", "Cabinet hardware essentials", "Painter’s tape + drop protection"]
+  },
+  garage: {
+    title: "Garage Organization",
+    desc: "Sturdy storage basics so you can mount, hang, and organize with confidence.",
+    items: ["Wall hooks & rails", "Heavy-duty anchors", "Fastener assortment", "Stud finder + level", "Storage bins + labels"]
+  }
+};
+
+function openModal(key) {
+  const b = bundles[key];
+  if (!b) return;
+
+  modalTitle.textContent = b.title;
+  modalDesc.textContent = b.desc;
+
+  modalList.innerHTML = "";
+  b.items.forEach((it) => {
+    const li = document.createElement("li");
+    li.textContent = it;
+    modalList.appendChild(li);
+  });
+
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+document.querySelectorAll(".bundleBtn").forEach((btn) => {
+  btn.addEventListener("click", () => openModal(btn.dataset.bundle));
+});
+
+modalBackdrop.addEventListener("click", closeModal);
+modalClose.addEventListener("click", closeModal);
+modalSecondary.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+});
+
+modalPrimary.addEventListener("click", () => {
+  closeModal();
+  if (typeof showToast === "function") showToast("Bundle added (demo)");
+});
