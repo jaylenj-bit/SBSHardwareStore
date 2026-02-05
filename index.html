@@ -272,7 +272,7 @@
         <!-- Toast -->
         <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
           <span class="toast__icon" aria-hidden="true">🧺</span>
-          <span class="toast__text" id="toastText">Added to cart</span>
+          <span class="toast__text" id="toastText">Avaliable</span>
           <button class="toast__close" id="toastClose" aria-label="Close notification">✕</button>
         </div>
       </div>
@@ -283,7 +283,8 @@
       <div class="section__head">
         <h2 class="section__title reveal" data-reveal>Project-ready bundles (get it done in one trip)</h2>
         <p class="section__subtitle reveal" data-reveal>
-          This is the “portfolio” vibe from template #3—real-world project kits that make you feel ready.
+          
+          Real-world project kits that make you feel ready.
         </p>
       </div>
 
@@ -292,21 +293,21 @@
           <div class="project__img" aria-hidden="true"></div>
           <h3>Deck Build Essentials</h3>
           <p>Fasteners, treated lumber, sealant—plus the bits you’ll forget.</p>
-          <button class="btn btn--small btn--primary" type="button">View Bundle</button>
+          <button class="btn btn--small btn--primary bundleBtn" type="button" data-bundle="deck">View Bundle</button>
         </article>
 
         <article class="project card tilt reveal" data-reveal>
           <div class="project__img alt1" aria-hidden="true"></div>
           <h3>Kitchen Refresh Kit</h3>
           <p>Caulk, paint tools, anchors, hardware—clean finish, clean install.</p>
-          <button class="btn btn--small btn--primary" type="button">View Bundle</button>
+          <button class="btn btn--small btn--primary bundleBtn" type="button" data-bundle="kitchen">View Bundle</button>
         </article>
 
         <article class="project card tilt reveal" data-reveal>
           <div class="project__img alt2" aria-hidden="true"></div>
           <h3>Garage Organization</h3>
           <p>Rails, hooks, anchors, bins—everything measured and sturdy.</p>
-          <button class="btn btn--small btn--primary" type="button">View Bundle</button>
+          <button class="btn btn--small btn--primary bundleBtn" type="button" data-bundle="garage">View Bundle</button>
         </article>
       </div>
     </section>
@@ -516,5 +517,27 @@
   </footer>
 
   <script src="script.js"></script>
+
+            <!-- Bundle Modal -->
+<div class="modal" id="bundleModal" aria-hidden="true">
+  <div class="modal__backdrop" id="modalBackdrop"></div>
+
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__head">
+      <h3 id="modalTitle" class="modal__title">Bundle</h3>
+      <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
+    </div>
+
+    <p class="modal__desc" id="modalDesc"></p>
+
+    <ul class="modal__list" id="modalList"></ul>
+
+    <div class="modal__actions">
+      <button class="btn btn--ghost" id="modalSecondary" type="button">Close</button>
+      <button class="btn btn--primary" id="modalPrimary" type="button">Add Bundle (demo)</button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
