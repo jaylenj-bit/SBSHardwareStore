@@ -151,7 +151,7 @@ $$(".chip").forEach((chip) => {
 /* ===== Copy address ===== */
 const copyBtn = $("#copyBtn");
 copyBtn?.addEventListener("click", async () => {
-  const addr = "123 Cedar St, Your City, NY";
+  const addr = "329 Nassau Rd, Roosevelt, NY 11575";
   try {
     await navigator.clipboard.writeText(addr);
     showToast("Address copied!");
