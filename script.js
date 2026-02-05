@@ -133,7 +133,7 @@ const searchBtn = $("#searchBtn");
 function runSearch(query) {
   const q = (query || "").trim();
   if (!q) return showToast("Type something to search (demo)");
-  showToast(`Searching “${q}” (demo)`);
+  showToast(`Searching “${q}”`);
 }
 searchBtn.addEventListener("click", () => runSearch(searchInput.value));
 searchInput.addEventListener("keydown", (e) => {
